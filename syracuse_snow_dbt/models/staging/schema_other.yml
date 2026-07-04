@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: stg_cityline_requests
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: category
+        tests:
+          - not_null
+  - name: stg_neighborhoods
+    columns:
+      - name: fid
+        tests:
+          - not_null
+          - unique
+      - name: name
+        tests:
+          - not_null
+          - unique

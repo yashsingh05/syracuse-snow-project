@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: stg_snow_routes
+    columns:
+      - name: snowroutesegmentid
+        tests:
+          - not_null
+      - name: servicestatus
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Not Serviced', 'Serviced']
